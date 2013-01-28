@@ -3,6 +3,8 @@
  */
 var _log = function() {
 
-    Utils.settings.debug && window.console && console.log.apply(console, arguments);
+	var debug = true;
+
+    debug && window.console && console.log.apply(console, arguments);
 
 } // log
