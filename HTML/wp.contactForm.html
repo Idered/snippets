@@ -1,0 +1,7 @@
+<form id="contact-form" action="<?php admin_url( 'admin-ajax.php' ) ?>" method="post">
+	<input type="hidden" name="action" value="sendMail">
+	<input type="text" name="name" placeholder="Your Name">
+	<input type="text" name="email" placeholder="Your Email">
+	<textarea name="message" placeholder="Type here your message..." rows="3"></textarea>
+	<input type="submit" name="submit" value="Submit">
+</form>
