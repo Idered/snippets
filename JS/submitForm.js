@@ -2,7 +2,7 @@
  * Add ajax support for contact form
  * @param  {jQuery object} $form Form element
  */
-submitForm: function($form) {
+function submitForm($form) {
 
     $form.on('submit', function() {
 

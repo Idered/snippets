@@ -1,9 +1,9 @@
 /**
  * Custom log function wrapper
  */
-var _log = function() {
+function _log() {
 
-	var debug = true;
+    var debug = true;
 
     debug && window.console && console.log.apply(console, arguments);
 

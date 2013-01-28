@@ -1,0 +1,17 @@
+/**
+ * @see http://jsbin.com/oxuyop/11/edit
+ *
+ * Code:
+   <i class="inliner"></i>
+   <div>Sample content</div>
+ */
+
+.inliner {
+    height: 100%;
+}
+
+.inliner,
+.inliner + * {
+    display: inline-block;
+    vertical-align: middle;
+}
