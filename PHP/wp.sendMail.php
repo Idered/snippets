@@ -14,10 +14,13 @@ function sendMail() {
 		'status' => -2,
 		'errors' => []
 	);
+	
 	if ( ! isset($_POST['name']) || ! isset($_POST['email']) || ! isset($_POST['message']) ) {
+		
 		echo json_encode($response);
 		
 		die();
+		
 	}
 
 	$name = esc_attr($_POST['name']);
