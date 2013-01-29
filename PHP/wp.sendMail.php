@@ -10,14 +10,19 @@
  */
 function sendMail() {
 
-	$name = esc_attr($_POST['name']);
-	$email = $_POST['email'];
-	$message = esc_textarea($_POST['message']);
-
 	$response = array(
 		'status' => -2,
 		'errors' => []
 	);
+	if ( ! isset($_POST['name']) || ! isset($_POST['email']) || ! isset($_POST['message']) ) {
+		echo json_encode($response);
+		
+		die();
+	}
+
+	$name = esc_attr($_POST['name']);
+	$email = $_POST['email'];
+	$message = esc_textarea($_POST['message']);
 
 	if ( ! strlen($name) )
 		$response['errors']['name'] = "C'mon, what's your name?";
