@@ -24,7 +24,7 @@ function sendMail() {
 	}
 
 	$name = esc_attr($_POST['name']);
-	$email = $_POST['email'];
+	$email = sanitize_email($_POST['email']);
 	$message = esc_textarea($_POST['message']);
 
 	if ( ! strlen($name) )
