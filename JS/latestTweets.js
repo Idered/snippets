@@ -1,7 +1,7 @@
 /**
  * Get latest tweets
  * @param  {string} username
- * @param  {int} num      Number of tweets to get
+ * @param  {int}    num      Number of tweets to get
  */
 function getTweets(username, num) {
 
