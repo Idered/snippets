@@ -11,4 +11,5 @@ function softScroll(element) {
         }, 500);
 
     });
+
 } // softScroll
