@@ -1,0 +1,139 @@
+/*----------------------------------------------------------------------------*\
+	$PAGE-STYLES
+\*----------------------------------------------------------------------------*/
+
+html {
+	text-align: center;
+	font: 1em/1.5 sans-serif;
+}
+
+body {
+	margin: 80px 20px;
+}
+
+
+/*----------------------------------------------------------------------------*\
+	$DROPDOWN
+
+	<div class="dropdown">
+		<div class="dropdown__text">Filter byt tag</div>
+		<div class="dropdown__toggle"></div>
+		<div class="dropdown__content">
+			<a href="">Lorem ipsum</a>
+			<a href="">Dolor sit amet</a>
+			<a href="">Tag name</a>
+		</div>
+	</div>
+\*----------------------------------------------------------------------------*/
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	font-size: .9em;
+	height: 34px;
+	max-width: 400px;
+	width: 100%;
+
+	color: #666;
+	background: rgb(248,248,248);
+	background-image: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(241,241,241,1) 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(248,248,248,1)), color-stop(100%,rgba(241,241,241,1)));
+	background-image: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(241,241,241,1) 100%);
+	background-image: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(241,241,241,1) 100%);
+	background-image: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(241,241,241,1) 100%);
+	background-image: linear-gradient(to bottom,  rgba(248,248,248,1) 0%,rgba(241,241,241,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f1f1f1',GradientType=0 );
+}
+
+.dropdown__text {
+	text-indent: 10px;
+	line-height: 32px;
+	border-radius: 3px;
+	cursor: default;
+	border: 1px solid #d9d9d9;
+}
+
+.dropdown__toggle {
+	z-index: 1;
+	cursor: pointer;
+	position: absolute;
+	text-align: center;
+	top: 1px;
+	right: 1px;
+	border: none;
+	padding: 0;
+	height: 32px;
+	width: 33px;
+	border-left: 1px solid #d9d9d9;
+}
+
+.dropdown__toggle:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -3px 0 0 -5px;
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #999 transparent transparent transparent;
+}
+
+.dropdown__toggle:hover:after {
+	border-top-color: #777;
+}
+
+.dropdown.is-open .dropdown__toggle {
+	background-color: #eee;
+	box-shadow: 0 0 5px rgba(0,0,0, .1) inset;
+}
+
+.dropdown.is-open .dropdown__toggle:after {
+	border-width: 0 6px 6px 6px;
+	border-color: transparent transparent #777 transparent;
+}
+
+.dropdown__content {
+	-webkit-transition: .25s ease;
+	-moz-transition: .25s ease;
+	-ms-transition: .25s ease;
+	-o-transition: .25s ease;
+	transition: .25s ease;
+
+	list-style-type: none;
+	position: absolute;
+	top: 33px;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	visibility:hidden;
+	border-radius: 3px;
+	text-indent: 10px;
+	line-height: 39px;
+	background-color: #f0f0f0;
+	border: 1px solid #d9d9d9;
+	right: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.dropdown__content a {
+	text-decoration: none;
+	display: block;
+	color: inherit;
+}
+
+.dropdown__content li:hover {
+	background-color: #f8f8f8;
+}
+
+.dropdown__content li + li {
+	border-top: 1px solid #d9d9d9;
+}
+
+.dropdown.is-open .dropdown__content {
+	opacity: 1;
+	visibility: visible;
+}
