@@ -1,6 +1,6 @@
 //Lea Verou's getVendorPrefix()
-//I DO NOT OWN THIS CODE IN, NO WARRANTY EXPRESSED NOR IMPLIED
-//THE OWNER OF THIS CODE IS LEA VEROU AND CAN BE OBTAINED AT http://lea.verou.me/2009/02/find-the-vendor-prefix-of-the-current-browser/
+//NO WARRANTY EXPRESSED NOR IMPLIED
+//Origin: AT http://lea.verou.me/2009/02/find-the-vendor-prefix-of-the-current-browser/
 
  
 function getVendorPrefix()
