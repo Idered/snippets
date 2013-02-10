@@ -1,5 +1,5 @@
 //Lea Verou's getVendorPrefix()
-//NO WARRANTY EXPRESSED NOR IMPLIED
+//NO WARRANTY EXPRESSED NOR IMPLIED. USE AT YOUR OWN RISK.
 //Origin: AT http://lea.verou.me/2009/02/find-the-vendor-prefix-of-the-current-browser/
 
  
