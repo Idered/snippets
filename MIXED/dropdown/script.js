@@ -1,19 +1,24 @@
 (function($) {
 
-	$('.dropdown').each(function() {
+    $('.dropdown').each(function() {
 
-		var $dropdown = $(this),
-			$toggle   = $dropdown.children('.dropdown__toggle');
+        var $this = $(this);
 
-		$toggle.on('click', function() {
+        $(this).find('.dropdown__toggle').on('click', function(event) {
 
-			$dropdown.toggleClass('is-open');
+            event.stopPropagation();
 
-			$('.dropdown').not($dropdown).removeClass('is-open');
+            $this.toggleClass('is-open');
 
-		});
+        });
 
-	});
+    });
+
+    $(document).on('click', function() {
+
+        $('.is-open').removeClass('is-open');
+
+    });
 
 
 })(jQuery);
