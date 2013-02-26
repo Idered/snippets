@@ -50,7 +50,7 @@ body {
 .dropdown__toggle {
 	border-left: 1px solid #d9d9d9;
 	cursor: pointer;
-	top: 1px;
+	top: 0;
 	bottom: 0;
 	right: 1px;
 	z-index: 1;
@@ -120,7 +120,7 @@ body {
 	display: block;
 	color: inherit;
 	text-decoration: none;
-	/* Add ... if too long*/
+	/* Add ... if too long */
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
