@@ -54,5 +54,28 @@ function sendMail() {
 	die();
 }
 
-add_action('wp_ajax_sendMail', 'sendMail');
-add_action('wp_ajax_nopriv_sendMail', 'sendMail');
+
+add_action( 'init', 'sm_ajax_setup' );
+
+/**
+ * Sets up ajax actions for form posting
+ * 
+ * @hook init
+ */
+function sm_ajax_setup() {
+
+	// handle ajax requests
+	add_action( 'wp_ajax_sendMail', 'sendMail' );
+	add_action( 'wp_ajax_nopriv_sendMail', 'sendMail' );
+
+
+	// not logged in 
+	if ( isset( $_REQUEST['action'] ) ) {
+		do_action( 'wp_ajax_nopriv_' . $_REQUEST['action'] );
+	}
+
+	// logged in
+	if ( isset( $_POST['action'] ) ) {
+		do_action( 'wp_ajax_' . $_POST['action'] );
+	}
+}
