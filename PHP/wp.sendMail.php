@@ -18,8 +18,8 @@ function sendMail() {
 
 	if ( !isset( $_POST['name'] ) || !isset( $_POST['email'] ) || !isset( $_POST['message'] ) ) {
 
+		header( "Content-Type: application/json" );
 		echo json_encode( $response );
-
 		die();
 	}
 
@@ -50,7 +50,6 @@ function sendMail() {
 
 	header( "Content-Type: application/json" );
 	echo json_encode( $response );
-
 	die();
 }
 
