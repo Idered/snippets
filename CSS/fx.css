@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------*\
+	$FX | Hover special effects
+\*----------------------------------------------------------------------------*/
+
+[class*=fx--] {
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		 -o-transition: all .25s ease;
+			transition: all .25s ease;
+}
+
+/*------------------------------------*/
+
+.fx--opacity:hover {
+	opacity: .7;
+	filter: alpha(opacity = 70);
+}
+
+/*------------------------------------*/
+
+@-webkit-keyframes pulse { 0% { opacity: .6; } 50% { opacity: 1; } 100% { opacity: .6; } }
+@-moz-keyframes pulse    { 0% { opacity: .6; } 50% { opacity: 1; } 100% { opacity: .6; } }
+@-o-keyframes pulse      { 0% { opacity: .6; } 50% { opacity: 1; } 100% { opacity: .6; } }
+@keyframes pulse         { 0% { opacity: .6; } 50% { opacity: 1; } 100% { opacity: .6; } }
+
+.fx--pulse {
+	-webkit-animation: pulse 1s infinite;
+	-moz-animation:    pulse 1s infinite;
+	-o-animation:      pulse 1s infinite;
+	animation:         pulse 1s infinite;
+}
